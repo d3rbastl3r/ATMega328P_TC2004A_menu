@@ -1,6 +1,6 @@
-PROJECT=atmega48_based_user_interface
-PARTNO=m48
-MCU=atmega48
+PROJECT=atmega328_display_client
+PARTNO=m328p
+MCU=atmega328p
 BITCLOCK=32 # Adjust the Frequency of the Programmer. Use 1 on >=4MHz, 32 >=128KHz
 PORT=usb
 PROGRAMMER_ID=avrisp2

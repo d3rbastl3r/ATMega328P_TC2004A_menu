@@ -1,2 +1,2 @@
-./ATMega328P_display_client/obj/.*
-
+*.obj
+.vscode

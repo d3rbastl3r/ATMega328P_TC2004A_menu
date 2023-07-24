@@ -1,7 +1,7 @@
 #ifndef _PROGRESS_VIEW__CPP_
 #define _PROGRESS_VIEW__CPP_
 
-#include "_atmega48Conf.h"
+#include "_atmega328PConf.h"
 
 #include <avr/io.h>
 

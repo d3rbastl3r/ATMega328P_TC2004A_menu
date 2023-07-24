@@ -3,13 +3,13 @@
  * data: initialization data. Ends up also in flash and sram?
  * bss : is ends up in ram
  * 
- * ATMega48 specs
- *  4  KBytes Flash
- *  512 Bytes SRAM
- *  256 Bytes EEPROM
+ * ATMega328 specs
+ *  X  KBytes Flash
+ *  XXX Bytes SRAM
+ *  XXX Bytes EEPROM
  */
 
-#include "_atmega48Conf.h"
+#include "_atmega328PConf.h"
 
 #include <avr/interrupt.h>
 #include <avr/io.h>
