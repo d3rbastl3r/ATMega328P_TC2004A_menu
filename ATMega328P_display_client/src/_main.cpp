@@ -3,10 +3,10 @@
  * data: initialization data. Ends up also in flash and sram?
  * bss : is ends up in ram
  * 
- * ATMega328 specs
- *  X  KBytes Flash
- *  XXX Bytes SRAM
- *  XXX Bytes EEPROM
+ * ATMega328P specs
+ *  32K Bytes Flash
+ *   2K Bytes SRAM
+ *   1K Bytes EEPROM
  */
 
 #include "_atmega328PConf.h"
