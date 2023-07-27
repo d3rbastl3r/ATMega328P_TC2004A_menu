@@ -15,7 +15,8 @@ $(PROJECT).hex: ./obj/_main.o \
 				./obj/MenuEntry.o \
 				./obj/MenuView.o \
 				./obj/ProgramView.o \
-				./obj/ProgressView.o
+				./obj/ProgressView.o \
+				./obj/SPI.o
 	avr-gcc $^ -mmcu=$(MCU) -Os -o $(PROJECT).hex
 	avr-size -B $(PROJECT).hex
 
@@ -44,6 +45,9 @@ $(PROJECT).hex: ./obj/_main.o \
 	avr-gcc -c $< -mmcu=$(MCU) -Os -o $@
 
 ./obj/ProgressView.o: ./src/ProgressView.cpp
+	avr-gcc -c $< -mmcu=$(MCU) -Os -o $@
+
+./obj/SPI.o: ./src/SPI.cpp ./src/SPI.h
 	avr-gcc -c $< -mmcu=$(MCU) -Os -o $@
 
 flash:
