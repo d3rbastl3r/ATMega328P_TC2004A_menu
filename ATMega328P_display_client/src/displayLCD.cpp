@@ -1,4 +1,4 @@
-#include "_atmega48Conf.h"
+#include "_atmega328PConf.h"
 
 #include <avr/io.h>
 #include <util/delay.h>
