@@ -1,3 +1,5 @@
+#include "_atmega328PConf.h"
+
 #include <avr/interrupt.h>
 #include <avr/io.h>
 
@@ -21,7 +23,7 @@ void BUTTON_ARRAY_setupMCU() {
     // Activate "Pin Change Interrupts" for PCINT11 (PC3)
     PCMSK1 |= (1 << PCINT11);
 
-    // Activate of te interrupts for port c (PCIE1)
+    // Activate of the interrupts for port c (PCIE1)
     PCICR |= (1 << PCIE1);
 
     // Global enable of interrupts
