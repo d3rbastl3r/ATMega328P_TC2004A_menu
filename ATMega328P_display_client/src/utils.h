@@ -1,5 +1,5 @@
-#ifndef _UTILS__CPP_
-#define _UTILS__CPP_
+#ifndef _UTILS__H_
+#define _UTILS__H_
 
 #include <avr/io.h>
 

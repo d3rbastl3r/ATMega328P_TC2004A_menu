@@ -1,6 +1,3 @@
-#ifndef _UTILS__CPP_
-#define _UTILS__CPP_
-
 #include <avr/io.h>
 
 #include "utils.h"
@@ -17,5 +14,3 @@ void UTILS_toChar(uint8_t from, char result[3]) {
     singleNum = (from % 10) + 48;
     result[0] = (char)singleNum;
 }
-
-#endif
