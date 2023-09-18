@@ -1,7 +1,11 @@
 #ifndef _UTILS__H_
 #define _UTILS__H_
 
-#include <avr/io.h>
+#ifndef ENABLE_UTEST
+    #include <avr/io.h>
+#else
+    #include "../lib_mock/avr_io.h"
+#endif
 
 /**
  * Converts an integer to a char*.
