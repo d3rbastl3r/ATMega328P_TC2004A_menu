@@ -35,10 +35,12 @@ clean:
 	rm --force ./obj/*.o
 	rm --force ./obj/framework/*.o
 	rm --force ./obj/test/*.o
-	rm --force ./src/test/*.cpp
-	rm --force ./src/test/*.h
 	rm --force testMain
 
-cp_test_sources:
+clean_sources:
+	rm --force ./src/test/*.cpp
+	rm --force ./src/test/*.h
+
+cp_sources:
 	cp ../ATMega328P_display_client/src/utils.h ./src/test/
 	cp ../ATMega328P_display_client/src/utils.cpp ./src/test/

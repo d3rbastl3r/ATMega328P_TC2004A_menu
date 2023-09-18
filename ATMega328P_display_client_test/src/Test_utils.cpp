@@ -22,14 +22,14 @@ class Test_utils {
             "toChar_should_convert_single_digit_number_to_char_with_two_leading_zeros",
             [](void) {
                 // given
-                uint8_t numberToConvert = 12;
+                uint8_t numberToConvert = 1;
                 char result[3] = {};
 
                 // when
                 UTILS_toChar(numberToConvert, result);
 
                 // then
-                Assertions::assertEqual(result, "012", 3);
+                Assertions::assertEqual(result, "001", 3);
             }
         ));
 
@@ -37,9 +37,14 @@ class Test_utils {
             "toChar_should_convert_dual_digit_number_to_char_with_one_leading_zero",
             [](void) {
                 // given
+                uint8_t numberToConvert = 13;
+                char result[3] = {};
+
                 // when
+                UTILS_toChar(numberToConvert, result);
+
                 // then
-                std::cout << "Two Digits test ..." << std::endl;
+                Assertions::assertEqual(result, "013", 3);
             }
         ));
 
@@ -47,9 +52,14 @@ class Test_utils {
             "toChar_should_convert_three_digit_number_to_char_with_no_leading_zeroes",
             [](void) {
                 // given
+                uint8_t numberToConvert = 128;
+                char result[3] = {};
+
                 // when
+                UTILS_toChar(numberToConvert, result);
+
                 // then
-                std::cout << "Three Digits test ..." << std::endl;
+                Assertions::assertEqual(result, "128", 3);
             }
         ));
     }
