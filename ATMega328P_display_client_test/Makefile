@@ -36,4 +36,5 @@ clean:
 	rm --force testMain
 
 cp_test_sources:
-	cp ../ATMega328P_display_client/src/* ./src/test/
+	cp ../ATMega328P_display_client/src/utils.h ./src/test/
+	cp ../ATMega328P_display_client/src/utils.cpp ./src/test/
