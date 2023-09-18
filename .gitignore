@@ -1,2 +1,3 @@
 *.o
-.vscode
+ATMega328P_display_client_test/src/test/*.cpp
+ATMega328P_display_client_test/src/test/*.h
