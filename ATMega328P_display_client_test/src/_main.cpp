@@ -8,6 +8,7 @@ int main(void) {
     Test_utils testUtils;
 
     for (const Test& test : testUtils.tests) {
+        std::cout << "- " << test.name << std::endl;
         test.function();
     }
 

@@ -9,6 +9,7 @@
 #include <string.h>
 
 #include "framework/Test.cpp"
+#include "framework/Assertions.cpp"
 
 #include "test/utils.h"
 
@@ -28,15 +29,7 @@ class Test_utils {
                 UTILS_toChar(numberToConvert, result);
 
                 // then
-                if (strncmp(result, "012", 3) == 0) {
-                    std::cout << "Matches" << std::endl;
-                }
-
-                else {
-                    std::cout << "NOT Matches! " <<  std::endl;
-                    std::cout << "Value: " << result <<  std::endl;
-                    std::cout << "Expected: " << "012" <<  std::endl;
-                }
+                Assertions::assertEqual(result, "012", 3);
             }
         ));
 

@@ -9,6 +9,7 @@ UTFLAGS += -DENABLE_UTEST=1
 testMain: ./obj/_main.o \
           ./obj/Test_utils.o \
 		  ./obj/framework/Test.o \
+		  ./obj/framework/Assertions.o \
           ./obj/test/utils.o \
 
 	$(CC) $(CFLAGS) -o $@ $^
@@ -21,6 +22,9 @@ testMain: ./obj/_main.o \
 
 # Compile test framework files
 ./obj/framework/Test.o: ./src/framework/Test.cpp
+	$(CC) $(CFLAGS) $(UTFLAGS) -c -o $@ $<
+
+./obj/framework/Assertions.o: ./src/framework/Assertions.cpp
 	$(CC) $(CFLAGS) $(UTFLAGS) -c -o $@ $<
 
 # Compile files to test
