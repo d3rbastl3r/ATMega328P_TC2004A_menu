@@ -1,0 +1,1 @@
+This folder contains source files which should be tested. This source files should be copied before build but never checked in.
