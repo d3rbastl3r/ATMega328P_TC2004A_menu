@@ -1,0 +1,1 @@
+Source files are the files which should be tested. This files should not checked in but should be copied from the main project before compiling the tests.

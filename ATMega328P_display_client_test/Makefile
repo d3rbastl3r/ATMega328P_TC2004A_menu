@@ -11,7 +11,6 @@ testMain: ./obj/_main.o \
 		  ./obj/framework/Test.o \
 		  ./obj/framework/Assertions.o \
           ./obj/test/utils.o \
-
 	$(CC) $(CFLAGS) -o $@ $^
 
 ./obj/_main.o: ./src/_main.cpp

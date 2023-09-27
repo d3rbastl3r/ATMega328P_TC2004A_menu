@@ -1,1 +1,1 @@
-This folder contains source files which should be tested. This source files should be copied before build but never checked in.
+The actually tests. For each class / file which need to be tested a separate folder and a separate Makefile are required.
