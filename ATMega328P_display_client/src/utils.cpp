@@ -1,7 +1,7 @@
 #ifndef ENABLE_UTEST
     #include <avr/io.h>
 #else
-    #include "../lib_mock/avr_io.h"
+    #include "_mocks/avr_io.h"
 #endif
 
 #include "utils.h"
