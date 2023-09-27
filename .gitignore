@@ -1,8 +1,12 @@
 *.o
 
 # Test specific file exclusions
+
 ## utils test
 ATMega328P_display_client_test/src/test/utils/utils.cpp
 ATMega328P_display_client_test/src/test/utils/utils.h
 ATMega328P_display_client_test/test_utils
 
+## RemoteCtrl test
+ATMega328P_display_client_test/src/test/remoteCtrl/RemoteCtrl.cpp
+ATMega328P_display_client_test/test_RemoteCtrl
