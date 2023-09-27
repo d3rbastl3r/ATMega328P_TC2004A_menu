@@ -7,3 +7,7 @@
 void SPI_setupMCU() {
     
 }
+
+void SPI_sendByte() {
+
+}
