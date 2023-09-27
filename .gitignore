@@ -1,3 +1,8 @@
 *.o
-ATMega328P_display_client_test/src/test/*.cpp
-ATMega328P_display_client_test/src/test/*.h
+
+# Test specific file exclusions
+## utils test
+ATMega328P_display_client_test/src/test/utils/utils.cpp
+ATMega328P_display_client_test/src/test/utils/utils.h
+ATMega328P_display_client_test/test_utils
+
