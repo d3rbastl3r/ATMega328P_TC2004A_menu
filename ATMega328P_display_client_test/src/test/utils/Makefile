@@ -22,8 +22,8 @@ $(OBJ_TEST_DIR)/utils.o: utils.cpp utils.h
 	$(CC) $(CFLAGS) $(UTFLAGS) -c -o $@ $<
 
 refresh:
-	rm utils.cpp
-	rm utils.h
+	rm --force utils.cpp
+	rm --force utils.h
 	cp $(ROOT_DIR)/../ATMega328P_display_client/src/utils.cpp ./
 	cp $(ROOT_DIR)/../ATMega328P_display_client/src/utils.h ./
 	mkdir --parents $(OBJ_TEST_DIR)
