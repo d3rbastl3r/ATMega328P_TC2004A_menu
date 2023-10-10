@@ -4,10 +4,5 @@
 
 #include "SPI.h"
 
-void SPI_setupMCU() {
-    
-}
-
-void SPI_sendByte() {
-
-}
+void SPI_setupMCU() {}
+void SPI_sendByte(uint8_t data) {}
