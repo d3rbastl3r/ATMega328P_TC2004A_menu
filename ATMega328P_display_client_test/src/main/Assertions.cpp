@@ -14,3 +14,13 @@ bool Assertions::assertEqual(const char* toTest, const char* expectedResult, uin
     std::cout << "but was: " << toTest <<  std::endl;
     return false;
 }
+
+bool Assertions::assertEqual(uint8_t toTest, uint8_t expectedResult) {
+    if (toTest == expectedResult) {
+        return true;
+    }
+
+    std::cout << "expected: " << expectedResult <<  std::endl;
+    std::cout << "but was: " << toTest <<  std::endl;
+    return false;
+}
