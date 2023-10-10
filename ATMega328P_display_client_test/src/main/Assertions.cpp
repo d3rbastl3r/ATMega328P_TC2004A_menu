@@ -20,7 +20,7 @@ bool Assertions::assertEqual(uint8_t toTest, uint8_t expectedResult) {
         return true;
     }
 
-    std::cout << "expected: " << expectedResult <<  std::endl;
-    std::cout << "but was: " << toTest <<  std::endl;
+    std::cout << "expected: " << unsigned(expectedResult) <<  std::endl;
+    std::cout << "but was: " << unsigned(toTest) <<  std::endl;
     return false;
 }
