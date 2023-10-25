@@ -12,9 +12,11 @@
 
 int main(void) {
     std::vector<Test> tests;
+    Assertions assertions;
+
     tests.push_back(Test(
         "toChar: should convert single digit number to char with two leading zeros",
-        [](void) {
+        [&](void) {
             // given
             uint8_t numberToConvert = 1;
             char result[3] = {};
@@ -23,13 +25,13 @@ int main(void) {
             UTILS_toChar(numberToConvert, result);
 
             // then
-            Assertions::assertEqual(result, "001", 3);
+            assertions.assertEqual(result, "001", 3);
         }
     ));
 
     tests.push_back(Test(
         "toChar: should convert dual digit number to char with one leading zero",
-        [](void) {
+        [&](void) {
             // given
             uint8_t numberToConvert = 13;
             char result[3] = {};
@@ -38,13 +40,13 @@ int main(void) {
             UTILS_toChar(numberToConvert, result);
 
             // then
-            Assertions::assertEqual(result, "013", 3);
+            assertions.assertEqual(result, "013", 3);
         }
     ));
 
     tests.push_back(Test(
         "toChar: should convert three digit number to char with no leading zeroes",
-        [](void) {
+        [&](void) {
             // given
             uint8_t numberToConvert = 128;
             char result[3] = {};
@@ -53,12 +55,13 @@ int main(void) {
             UTILS_toChar(numberToConvert, result);
 
             // then
-            Assertions::assertEqual(result, "128", 3);
+            assertions.assertEqual(result, "128", 3);
         }
     ));
+    
     for (Test test : tests) {
-        std::cout << "- " << test.getName() << std::endl;
         test.execute();
+        assertions.showFails(test.getName());
     }
 
     return 0;
