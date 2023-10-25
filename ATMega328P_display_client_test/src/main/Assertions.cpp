@@ -9,7 +9,7 @@
 
 void Assertions::showFails(std::string testDescription) {
     if (this->failOutputs.size() > 0) {
-        std::cout << std::endl << "[ FAILED ] " << testDescription << std::endl;
+        std::cout << std::endl << "\033[1;31m[ FAILED ]\033[0m " << testDescription << std::endl;
         for (std::function<void()> output : this->failOutputs) {
             output();
         }
@@ -17,7 +17,7 @@ void Assertions::showFails(std::string testDescription) {
     }
 
     else {
-        std::cout << "[ PASSED ] " << testDescription << std::endl;
+        std::cout << "\033[1;32m[ PASSED ]\033[0m " << testDescription << std::endl;
     }
 
     this->failOutputs.clear();
